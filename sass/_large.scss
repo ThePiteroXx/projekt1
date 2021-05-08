@@ -1,0 +1,350 @@
+@media(min-width: 992px) {
+
+    .burger-btn {
+        display: none;
+    }
+
+    //navigation
+
+    .nav {
+
+        &-mobile {
+            display: none;
+        }
+
+        &-desktop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 70px;
+            z-index: 100;
+
+            &__items {
+                margin: 0.5em 1em;
+
+            }
+
+            &__item {
+                position: relative;
+                text-decoration: none;
+                margin: 0 1em;
+                padding: 0.5em 1em;
+                font-size: 1.25rem;
+                color: #fff;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: #fff;
+                }
+
+                &::before {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $third-green;
+                    transform-origin: right;
+                    transform: scale(0);
+                    content: '';
+                    transition: transform .2s;
+                }
+
+                &:hover::before {
+                    transform-origin: left;
+                    transform: scale(1);
+                }
+            }
+
+            &__logo {
+                cursor: pointer;
+                color: #fff;
+                font-family: 'Dancing Script', cursive;
+                font-size: 2.8rem;
+                text-decoration: none;
+                margin: 0 2em;
+
+                &:hover {
+                    color: #fff;
+                }
+                
+
+                span {
+                    font-weight: 600;
+                    font-size: 2.8rem;
+                    color: $third-green;
+                    text-shadow: 2px 2px 8px $third-green;
+                    transition: color .3s;
+                }
+
+                i {
+                    font-size: 2.4rem;
+                    margin: 0 10px;
+                    transition: color .3s;
+                    
+                }
+
+                &:hover i {
+                    color: $second-green;
+                    text-shadow: none;
+                }
+
+                &:hover span {
+                    color: #fff;
+                    text-shadow: none;
+                    
+                }
+            }
+        }
+    }
+
+    //header
+
+    .header {
+        &__background {
+
+            &__text {
+                
+                h1 {
+                    font-size: 7rem;
+                }
+                
+                p {
+                    font-size: 2rem;
+                }
+            }
+            
+            &__btn {
+                color: #fff;
+                margin: 3em 1em;
+                padding: 0.5em 2em;
+                font-size: 1.8rem;
+                background: transparent;
+                border: 2px solid $third-green;
+                
+            }
+        }
+
+    }
+
+    //About us
+
+    .aboutus {
+
+        &__instruction__boxes {
+            display: flex;
+            margin-top: 5em;
+        }
+
+        &__instruction__box {
+            
+            margin-right: 1em;
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+            
+        }
+    }
+
+    //Diets
+
+    .diets {
+        .fa-arrow-right, .fa-arrow-left {
+            margin: 0 1em;
+            padding: 1em;
+        }
+
+        &__box {
+            &-title {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .price {
+
+        .plate {
+            display: none;
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            width: 30%;
+            z-index: -98;
+        }
+        
+    
+        .circle{
+            display: block;
+            position: absolute;
+            bottom: -10%;
+            right: -5%;
+            width: 35%;
+            background-color: $green;
+            border-radius: 50%;
+            z-index: -99;
+
+            &::before {
+                content: '';
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 55px;
+                background-color: #fff;
+            }
+        }
+
+        .ornament1 {
+            display: block;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 500px;
+        }
+
+        .section-text {
+            font-size: 2rem;
+        }
+    }
+
+    //Map
+    .map_mobile {
+        display: none;
+    }
+
+    .map_desktop {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $second-green;
+            // clip-path: polygon(0% 0%, 0% 100%, 29% 100%, 54% 0%);
+            z-index: 0;
+        }
+
+        .block {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 55px;
+            background-color: $second-green;
+            z-index: 1;
+        }
+
+
+        &__col1 {
+            position: relative;
+            width: 35%;
+            z-index: 1;
+
+            .section-heading {
+                font-family: 'Open Sans', sans-serif;
+                margin-bottom: 1em;
+            }
+
+            .section-text {
+                font-size: 2.3rem;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    
+        &__col2 {
+            width: 65%;
+            background-color: $second-green;
+            margin-bottom: 55px;
+
+            iframe {
+                position: relative;
+                width: 95%;
+                height: 600px;
+                z-index: 0;
+            }
+
+
+        }
+    }
+
+    .footer {
+        &-text {
+            display: flex;
+            justify-content: space-around;
+
+            .project {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+
+}
+
+
+
+@media(min-width: 1200px) {
+
+    .nav {
+        &-desktop {
+
+            &__item {
+                font-size: 1.6rem;
+            }
+            
+        }
+    }
+
+    .aboutus {
+        &__instruction__box {
+
+            h3 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .price {
+
+        .plate {
+            display: block;
+        }
+
+        .section-text {
+            span {
+                background-image:  linear-gradient(105deg, rgba(255, 255, 255, 0), rgba(0,0,0,.5));
+                border-radius: 20px
+            }
+        }
+}
+
+}
+
+@media(min-width: 1500px) {
+    .price {
+        .section-text {
+            span {
+                background-image: none;
+            }
+        }
+    }
+}
